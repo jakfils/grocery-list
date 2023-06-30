@@ -1,0 +1,47 @@
+:root {
+    --page-background-color: #f1f5f8;
+    --container-background-color: #ffffff;
+    --title-color: #063251;
+    --input-background-color: #f1f5f8;
+    --input-focus-border-color: #0663cd;
+    --item-color: #00102b;
+    --input-placeholder-color: #4b6e8e;
+    --item-edit-button-color: #6de676;
+    --item-delete-button-color: #e66b6c;
+    --items-clear-button-color: #e66b6c;
+
+}
+
+/* Body */
+body {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    background-color: var(--page-background-color);
+}
+
+/* Container */
+.container {
+    background-color: var(--container-background-color);
+    width: 95%;
+    margin: 0 auto;
+    padding: 3.5vw;
+}
+
+.title {
+    text-align: center;
+    font-size: font-size: clamp(1.125rem, 1.5vw + 1rem, 2.25rem);
+}
+/* Min-width 600px */
+@media screen and (min-width: 600px) {
+    .container {
+        width: 85%;
+    }
+
+}
+
+/* Mins-width 900px */
+@media screen and (min-width: 900px) {
+    .container {
+        width: 65%;
+    }
+
+}
