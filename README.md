@@ -1,11 +1,3 @@
-# Document
+# Grocery Liste
 
-Description
-
-## Desktop view
-
-![Desktop view](./img/desktop.jpg)
-
-## Mobile view
-
-![Mobile view](./img/mobile.jpg)
+Grocery list: a simple CRUD (Create, Read, Update, and Delete) application.
