@@ -3,12 +3,13 @@
     --container-background-color: #ffffff;
     --title-color: #063251;
     --input-background-color: #f1f5f8;
-    --input-focus-border-color: #0663cd;
+    --input-outiline-color: #0663cd;
     --item-color: #00102b;
     --input-placeholder-color: #4b6e8e;
     --item-edit-button-color: #6de676;
     --item-delete-button-color: #e66b6c;
     --items-clear-button-color: #e66b6c;
+    --button-background-color: #a5d5f9;
 
 }
 
@@ -16,6 +17,7 @@
 body {
     font-family: Roboto, Arial, Helvetica, sans-serif;
     background-color: var(--page-background-color);
+    font-size: 1.2rem;
 }
 
 /* Container */
@@ -23,19 +25,131 @@ body {
     background-color: var(--container-background-color);
     width: 95%;
     margin: 0 auto;
+    margin-top: 50px;
     padding: 3.5vw;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.24);
 }
+
+/* Title */
 
 .title {
     text-align: center;
-    font-size: font-size: clamp(1.125rem, 1.5vw + 1rem, 2.25rem);
+    font-size: clamp(1.125rem, 1.5vw + 1rem, 2.25rem);
+    letter-spacing: 4px;
+    padding-bottom: 2.5vw;
 }
+
+/* Form */
+form {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2.5vw;
+}
+
+/* Text input */
+input[type="text"] {
+    background-color: var(--input-background-color);
+    border: none;
+    padding: 0 0 0 5px;
+    max-width: 65%;
+}
+
+/* Focus text input */
+input[type="text"]:focus {
+    outline: solid 2px var(--input-outiline-color);
+    border-radius: 2px;
+}
+
+/* Text input placehoder */
+input[type="text"]::placeholder {
+    font-size: 1rem;
+}
+
+/* Submit input */
+input[type="submit"] {
+    background-color: var(--button-background-color);
+    border: none;
+    border-radius: 0 5px 5px 0;
+}
+
+/* Span block display */
+span {
+    display: block;
+}
+
+/* Items */
+.items {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.5vw;
+
+}
+
+/* Item */
+.item {
+    display: grid;
+    grid-template-columns: 5fr 0.7fr 0.7fr;
+    padding: 0.5vw;
+    /* justify-content: center; */
+}
+
+
+/* Item even and odd */
+.item:nth-child(odd) {
+    background-color: var(--page-background-color);
+}
+
+.item:nth-child(even) {
+    background-color: white;
+}
+
+
+/* Edit button */
+.edit {
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    color: var(--item-edit-button-color);
+}
+
+/* Delete Button */
+.delete {
+    /* font-size: 1.3rem; */
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    font-size: 1rem;
+    color: var(--item-delete-button-color);
+}
+
+/* Clear all items */
+.clear-items {
+    text-align: center;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    color: var(--items-clear-button-color);
+}
+
+/* Buttons cursor */
+input[type="submit"],
+.edit,
+.delete,
+.clear-items {
+    cursor: pointer;
+}
+
 /* Min-width 600px */
 @media screen and (min-width: 600px) {
     .container {
         width: 85%;
     }
 
+    .item {
+        grid-template-columns: 5fr 0.5fr 0.5fr;
+    }
 }
 
 /* Mins-width 900px */
