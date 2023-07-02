@@ -82,6 +82,7 @@ submit.addEventListener("click", (e) => {
     input.value = "";
     input.focus();
     showAlertMsg("Value changed", "#6de676");
+    document.location.reload();
   } else {
     document.location.reload();
     showAlertMsg("Please enter a value", "#e66b6c");
