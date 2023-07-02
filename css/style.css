@@ -17,7 +17,7 @@
 body {
     font-family: Roboto, Arial, Helvetica, sans-serif;
     background-color: var(--page-background-color);
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
 }
 
 /* Container */
@@ -29,6 +29,7 @@ body {
     padding: 3.5vw;
     border-radius: 10px;
     box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.24);
+    text-align: center;
 }
 
 /* Title */
@@ -95,6 +96,9 @@ span {
     /* justify-content: center; */
 }
 
+.item p {
+    text-align: left;
+}
 
 /* Item even and odd */
 .item:nth-child(odd) {
@@ -108,11 +112,11 @@ span {
 
 /* Edit button */
 .edit {
-    font-size: 0.8rem;
     display: flex;
     justify-content: right;
     align-items: center;
     color: var(--item-edit-button-color);
+    z-index: 12;
 }
 
 /* Delete Button */
@@ -123,6 +127,7 @@ span {
     align-items: center;
     font-size: 1rem;
     color: var(--item-delete-button-color);
+    z-index:13 ;
 }
 
 /* Clear all items */
@@ -139,6 +144,19 @@ input[type="submit"],
 .delete,
 .clear-items {
     cursor: pointer;
+}
+
+.alertMsg {
+    display: inline-flex;
+    /* min-height: 20px; */
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 0 5px;
+
+}
+
+.invisible {
+    visibility: hidden;
 }
 
 /* Min-width 600px */

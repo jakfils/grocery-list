@@ -12,40 +12,29 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet" />
 
   <title>Grocery List</title>
-  <script defer src="https://friconix.com/cdn/friconix.js"> </script>
+  <script src="https://kit.fontawesome.com/69b270b4df.js" crossorigin="anonymous"> </script>
 </head>
 
 <body>
   <div class="container">
+    <span class="alertMsg"></span>
 
     <!-- Title -->
     <h1 class="title">Grocery Bud</h1>
 
     <!-- Form -->
     <form action="">
-      <input type="text" id="inputElt" placeholder="e.g. eggs" autofocus>
-      <input type="submit" id="submit" value="Submit">
+      <input type="text" placeholder="e.g. eggs" autofocus>
+      <input type="submit" value="Submit">
     </form>
 
     <!-- Items -->
     <div class="items">
-      <div>
-        <div class="item">
-          <p class="item-name">Bacon</p><span class="edit"><i class="fi-xnsuxl-edit-solid"></i></span><span
-            class="delete"><i class="fi-xnsuxl-trash-bin"></i></span>
-        </div>
-        <div class="item">
-          <p class="item-name">Milk</p><span class="edit"><i class="fi-xnsuxl-edit-solid"></i></span><span
-            class="delete"><i class="fi-xnsuxl-trash-bin"></i></span>
-        </div>
-        <div class="item">
-          <p class="item-name">Eggs</p><span class="edit"><i class="fi-xnsuxl-edit-solid"></i></span><span
-            class="delete"><i class="fi-xnsuxl-trash-bin"></i></span>
-        </div>
-      </div>
     </div>
     <!-- Clear items -->
-    <div class="clear-items"><p>Clear items</p></div>
+    <div class="clear-items">
+      <p>Clear items</p>
+    </div>
   </div>
   <script src="./js/index.js"></script>
 </body>
