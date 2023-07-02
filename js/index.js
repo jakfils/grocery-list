@@ -11,6 +11,7 @@ const input = document.querySelector('input[type ="text"]');
 const submit = document.querySelector('input[type ="submit"]');
 const items = document.querySelector(".items");
 const alertMsg = document.querySelector(".alertMsg");
+const clearItems = document.querySelector(".clear-items");
 
 // Funtion Update localStorage
 const updateStorage = () => {
@@ -65,33 +66,25 @@ submit.addEventListener("click", (e) => {
     data.unshift(input.value);
     updateStorage();
     input.value = "";
-    showAlertMsg("Item added to the list", "#6de676");
     showItems();
     document.location.reload();
+    showAlertMsg("Item added to the list", "#6de676");
   } else if (!inputIsEmpty(input.value) && submit.value === "Edit") {
     submit.value = "Submit";
-    console.log(elementToEdit);
     var nodes = Array.prototype.slice.call(
       document.querySelector(".items").children
     );
     const itemToEdit = nodes.indexOf(elementToEdit.parentNode);
     data.splice(itemToEdit, 1, input.value);
     updateStorage();
-
-    elementToEdit.textContent = input.value;
-    console.log(input.value);
-    console.log(elementToEdit);
+    showItems();
 
     input.value = "";
     input.focus();
     showAlertMsg("Value changed", "#6de676");
-    // updateStorage();
-    // showItems();
-    // document.location.reload();
   } else {
-    showAlertMsg("Please enter a value", "#e66b6c");
-    // showItems();
     document.location.reload();
+    showAlertMsg("Please enter a value", "#e66b6c");
   }
 });
 
@@ -101,7 +94,6 @@ editBtns.forEach((editBtn) => {
     input.value = editBtn.previousSibling.textContent;
     input.focus();
     elementToEdit = editBtn.previousSibling;
-    console.log(elementToEdit);
   });
 });
 
@@ -121,9 +113,21 @@ deleteBtns.forEach((deleteBtn) => {
   });
 });
 
+clearItems.addEventListener("click", (e) => {
+  data = [];
+  updateStorage();
+  showItems();
+  input.focus();
+  document.location.reload();
+});
+
 input.addEventListener("focus", (e) => {
   submit.style.outline = "solid 2px var(--button-background-color)";
 });
 input.addEventListener("focusout", (e) => {
   submit.style.outline = "none";
 });
+
+if (items.childNodes.length < 2) {
+  clearItems.classList.add("invisible");
+}
