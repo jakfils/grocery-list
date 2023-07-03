@@ -10,7 +10,6 @@
     --item-delete-button-color: #e66b6c;
     --items-clear-button-color: #e66b6c;
     --button-background-color: #a5d5f9;
-
 }
 
 /* Body */
@@ -23,7 +22,7 @@ body {
 /* Container */
 .container {
     background-color: var(--container-background-color);
-    width: 95%;
+    width: 80%;
     margin: 0 auto;
     margin-top: 50px;
     padding: 3.5vw;
@@ -46,7 +45,7 @@ form {
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    padding-bottom: 2.5vw;
+    padding-bottom: 3.5vw;
 }
 
 /* Text input */
@@ -85,19 +84,22 @@ span {
     display: flex;
     flex-direction: column;
     margin-bottom: 2.5vw;
+    background-color: var(--page-background-color);
+    padding: 2px;
 
 }
 
 /* Item */
 .item {
     display: grid;
-    grid-template-columns: 5fr 0.7fr 0.7fr;
+    grid-template-columns: 5fr 0.5fr 0.5fr;
     padding: 0.5vw;
-    /* justify-content: center; */
 }
 
 .item p {
     text-align: left;
+    display: flex;
+    align-items: center;
 }
 
 /* Item even and odd */
@@ -113,21 +115,29 @@ span {
 /* Edit button */
 .edit {
     display: flex;
-    justify-content: right;
+    justify-content: center;
     align-items: center;
     color: var(--item-edit-button-color);
-    z-index: 12;
 }
 
 /* Delete Button */
 .delete {
     /* font-size: 1.3rem; */
     display: flex;
-    justify-content: right;
+    justify-content: center;
     align-items: center;
     font-size: 1rem;
     color: var(--item-delete-button-color);
-    z-index:13 ;
+}
+
+.fa-pen {
+    padding: 5px;
+    /* background-color: #e66b6c; */
+}
+
+.fa-trash {
+    padding: 5px;
+    /* background-color: aqua; */
 }
 
 /* Clear all items */
@@ -155,25 +165,34 @@ input[type="submit"],
 
 }
 
+/* Hidden elements */
 .invisible {
     visibility: hidden;
 }
 
-/* Min-width 600px */
-@media screen and (min-width: 600px) {
+/* Max-width 600px */
+@media screen and (max-width: 900px) {
     .container {
-        width: 85%;
+        width: 95%;
     }
 
     .item {
-        grid-template-columns: 5fr 0.5fr 0.5fr;
+        grid-template-columns: 5fr 0.9fr 0.9fr;
+    }
+
+    form {
+        padding-bottom: 10vw;
     }
 }
 
-/* Mins-width 900px */
-@media screen and (min-width: 900px) {
-    .container {
-        width: 65%;
+/* Max width 350px */
+@media screen and (max-width: 350px) {
+
+    .item {
+        grid-template-columns: 5fr 1.5fr 1.5fr;
     }
 
+    form {
+        padding-bottom: 10vw;
+    }
 }
