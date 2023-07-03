@@ -93,7 +93,7 @@ span {
 .item {
     display: grid;
     grid-template-columns: 5fr 0.5fr 0.5fr;
-    padding: 0.5vw;
+    padding: 0.5vw 0.5vw;
 }
 
 .item p {
@@ -178,6 +178,7 @@ input[type="submit"],
 
     .item {
         grid-template-columns: 5fr 0.9fr 0.9fr;
+        padding: 1vw 0.5vw;
     }
 
     form {
@@ -190,6 +191,7 @@ input[type="submit"],
 
     .item {
         grid-template-columns: 5fr 1.5fr 1.5fr;
+        padding: 2vw 0.5vw;
     }
 
     form {
