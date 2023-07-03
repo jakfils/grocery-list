@@ -125,7 +125,6 @@ items.addEventListener("click", (e) => {
     updateStorage();
     showItems();
     showAlertMsg("Item removed", "#e66b6c");
-    input.focus();
     input.value = "";
     buttonClearAndItemsPaddingState();
   }
@@ -136,7 +135,6 @@ clearItems.addEventListener("click", (e) => {
   data = [];
   updateStorage();
   showItems();
-  input.focus();
   input.value = "";
   buttonClearAndItemsPaddingState();
 });
