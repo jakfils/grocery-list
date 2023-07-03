@@ -79,6 +79,7 @@ submit.addEventListener("click", (e) => {
     data.unshift(input.value);
     updateStorage();
     input.value = "";
+    input.focus();
     showItems();
     showAlertMsg("Item added to the list", "#6de676");
     buttonClearAndItemsPaddingState();
