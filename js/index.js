@@ -126,6 +126,7 @@ items.addEventListener("click", (e) => {
     showItems();
     showAlertMsg("Item removed", "#e66b6c");
     input.value = "";
+    submit.value = "Submit";
     buttonClearAndItemsPaddingState();
   }
 });
@@ -136,6 +137,7 @@ clearItems.addEventListener("click", (e) => {
   updateStorage();
   showItems();
   input.value = "";
+  submit.value = "Submit";
   buttonClearAndItemsPaddingState();
 });
 
